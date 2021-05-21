@@ -5,32 +5,41 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script>
-    function nightdayhandler(self){
-        var target = document.querySelector('body');
-        var links = document.querySelectorAll('a');
-        if (self.value === 'night') {
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        self.value = 'day'
-        var i = 0;
-        while(i<links.length){
-            links[i].style.color = 'powderblue'
-            i +=1;
+        function LinkSetColor(color){
+            var links = document.querySelectorAll('a');
+            var i = 0;
+            while(i<links.length){
+                links[i].style.color = color;
+              i +=1;
+          }
         }
-        } else {
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        self.value = 'night'
-        var i = 0;
-        while(i<links.length){
-            links[i].style.color = 'orange'
-            i +=1;
-            }
+        function BodySetColor(color){
+            document.querySelector('body').style.color = color;
+        }
+        function BackgroundSetColor(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        
+        function nightdayhandler(self){
+            var target = document.querySelector('body');
+            
+            if (self.value === 'night') {
+            BackgroundSetColor('black');
+            BodySetColor('white');
+            self.value = 'day'
+            
+            LinkSetColor('powderblue');
+            } else {
+            BackgroundSetColor('white');
+            BodySetColor('black');
+            self.value = 'night'
+
+            LinkSetColor('orange');
         }
     }
     </script>
 </head>
-
+<body>
     <div>   
         <input type="button" value="night" onclick="nightdayhandler(this)">
     </div>

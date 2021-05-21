@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coworks = {
+            "programer" : "Lee Ji Ho",
+            "designer" : "Lee Dong Ho"
+        };
+        document.write("programer : " + coworks.programer+"<br>");
+        document.write("designer : " + coworks.designer+"<br>");
+        coworks.bookkeeper = "Lee Sang Su";
+        document.write("bookkeeper : " + coworks.bookkeeper+"<br>");
+        coworks["data scientist"] = "Lee Kuy Jung";
+        document.write("data scientist : " + coworks["data scientist"]+"<br>");
+    </script> 
+    <h2>iterate</h2>
+    <script>
+        for(var key in coworks){
+            document.write(key+'<br>');
+            
+        }
+    </script>
+</body>
+</html>
