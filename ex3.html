@@ -21,12 +21,25 @@
         coworks["data scientist"] = "Lee Kuy Jung";
         document.write("data scientist : " + coworks["data scientist"]+"<br>");
     </script> 
-    <h2>iterate</h2>
+    <h2>Iterate</h2>
     <script>
         for(var key in coworks){
-            document.write(key+'<br>');
-            
+            document.write(coworks[key]+'<br>');
         }
     </script>
+    <h2>Property & Method</h2>
+    <script>
+        coworks.showAll = function(){
+
+            for(var key in this){
+                document.write(key + " : " + this[key]+'<br>');
+            if (this[key] == 'Lee Kuy Jung') {
+                break;
+                }
+            } 
+        }
+        coworks.showAll();
+    </script> 
+    
 </body>
 </html>
