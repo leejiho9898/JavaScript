@@ -4,40 +4,7 @@
     <title>WEB1 - WELCOME!</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <script>
-        function LinkSetColor(color){
-            var links = document.querySelectorAll('a');
-            var i = 0;
-            while(i<links.length){
-                links[i].style.color = color;
-              i +=1;
-          }
-        }
-        function BodySetColor(color){
-            document.querySelector('body').style.color = color;
-        }
-        function BackgroundSetColor(color){
-            document.querySelector('body').style.backgroundColor = color;
-        }
-        
-        function nightdayhandler(self){
-            var target = document.querySelector('body');
-            
-            if (self.value === 'night') { 
-            BackgroundSetColor('black');
-            BodySetColor('white');
-            self.value = 'day'
-            
-            LinkSetColor('powderblue');
-            } else {
-            BackgroundSetColor('white');
-            BodySetColor('black');
-            self.value = 'night'
-
-            LinkSetColor('orange');
-        }
-    }
-    </script>
+    <script src="colors.js"></script>
 </head>
 <body>
     <div>   
