@@ -8,28 +8,81 @@
     <title>Signin</title>
 </head>
 <body>
-    <div class = "grid">
-        <div class = "inputform">
-            <p><h3>이메일</h3></p>
-            <p><input type="text" placeholder="이메일"></p>
-            <p><h3>비밀번호</h3></p>
-            <p><input type="password" placeholder="비밀번호"></p>
-            <p>8자이상 입력해주세요</p>
-            <p><h3>비밀번호 확인</h3></p>
-            <p><input type="password" placeholder="비밀번호 확인"></p>
-            <p><h3>별명</h3></p>
-            <p><input type="text" placeholder="별명"></p>
-            <p><h3>전화번호</h3></p>
-            <p><input type="text" placeholder="전화번호"></p>
-            <p> -를 포함하여 입력해주세요</p>
-        </div>
-        <div class = "signinform">
-        <h1>Sign in</h1> 
-        </div>
+    <form action="" method="POST" onsubmit="return submit()">
+        <div class = "grid" >
+            <div class = "inputform">
+                <p><h3>ID</h3></p>
+                <p><input type="text" placeholder="ID"></p>
+                <input type="submit" value="ID 중복 확인" onclick="idcheck2(document.getElementById('ID').value)">
+                <p><h3>비밀번호</h3></p>
+                <p><input type="password" placeholder="비밀번호" id="pw"></p>
+                <p>8자이상 입력해주세요</p>
+                <p><h3>비밀번호 확인</h3></p>
+                <p><input type="password" placeholder="비밀번호 확인" id="pwi"></p>
+                <p><h3>별명</h3></p>
+                <p><input type="text" placeholder="별명" id="nickname"></p>
+                <p><h3>전화번호</h3></p>
+                <p><input type="text" placeholder="전화번호" id = "phonenomber"></p>
+                <p> -를 포함하여 입력해주세요</p>
+            </div>
+            <div class = "signinform">
+            <h1>Sign in</h1> 
+            </div>
 
-    </div>
-    <input type="button" value="회원가입 완료">
+        </div>
+        <button type="submit">회원가입 완료</button>
+    </form>
+<script>
+    var Id=document.getElementById('ID').value,
+        Pw1=document.getElementById('pw').value,
+        Pw2=document.getElementById('pwi').value,
+        Nick = document.getElementById('nickname').value,
+        Phone = document.getElementById('phonenomber').value;
 
+    function idcheck(id){//아이디 조건
+        if (id.length > 13) {
+            alert('아이디는 13자리 미만이어야 합니다.')
+            return false;
+            }
+            else{
+                return true;
+            }
+        }
+
+    function idcheck2(id){ //아이디 중복체크
+    //나중에 더 배우면 추가.
+    }   
+    function pwcheck(pw1,pw2) { //비밀번호 조건
+        var special = /[`~!@#$%^&*()]/gi;
+        if (a != b) {
+            alert("비밀번호가 일치하지 않습니다");
+            return false;
+        }
+        else if (pw1.length<6||pw1.length>16) {
+            alert("비밀번호는 6글자 이상, 16글자 이하만 이용가능합니다.")
+            return false;
+        }
+        // else if(){
+                
+        //     } 아직 특수문자는 구현중
+
+    function phonecheck(phonenomber){
+        if(isNaN(phonenomber)==false){
+            alert("전화번호는 숫자로 입력해야 합니다.");
+            return false;
+        }
+        else{
+            return true;}
+    }
+
+    function submit(){
+        idcheck(Id);
+        pwcheck(Pw1,Pw2);
+        phonecheck(Phone);
+    }
+
+    }
+</script>
 
     
 

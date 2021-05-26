@@ -9,16 +9,20 @@
     
 </head>
 <body>
-    <div id = "grid">
-        <div>
-          <p><input type="text" placeholder="ID"></p>
-          <p><input type="password" placeholder="PW"></p>
-          <p><input type="button" value="   로그인    ">
-          <input type="button" value="   회원가입   "></p>
-            <p> <a href="어딘가로">비밀번호 찾기</a> </p>
-    </div>
-    <h1>LOG IN</h1> 
+    <form action="" onsubmit="">
+        <div id = "grid">
+            <div>
+            <p><input type="text" placeholder="ID"></p>
+            <p><input type="password" placeholder="PW"></p>
+            <div id = "buttons">
+                <p><button type="submit">로그인</button>
+                <input type="button" value="회원가입" onclick="어딘가로"></p>
+                <p> <a href="어딘가로">비밀번호 찾기</a> </p>
+            </div>
+        </div>
+        <h1>LOG IN</h1> 
 
-    </div>
+        </div>
+    </form>
 </body>
 </html>

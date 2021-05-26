@@ -4,7 +4,13 @@ body{
     color:rgb(212, 204, 204) ;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(tesla.jpg.jpg);
 }
-body input[type="button"]{
+body input[type="password"],body input[type="text"]{
+   border : none;
+    height: 20px;
+    padding: 8px;
+   border-radius: 5px;
+}
+body button{
     border: none;
     font-size: 20px;
     border-radius: 5px;
@@ -26,5 +32,16 @@ body input[type="button"]{
 }
 
 
+@media(max-width:1200px){
+    #grid{
+        display: block;   
+    }
+    .inputform{
+        margin-left: 0px;
+    }
+    .signinform{
+        margin-left: 0px;
+    }
 
+}      
 
