@@ -2,21 +2,20 @@ body{
     padding-top: 300px;
     background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(tesla.jpg.jpg);
 }
-#grid{
-    display: grid;
-    grid-template-columns: 800px 1fr;
+#flex{
+    display: flex;
+    justify-content: center;
 }
-#grid h1{
+#flex h1{
     color:rgb(212, 204, 204) ;
     text-align: left;
     border-left: 1px solid black;
     padding-left: 15px;
 }
-#grid p{
-    text-align: right;
+#inputform{
     margin-right: 15px;
 }
-#grid a{
+#flex a{
     font-size: 15px;
     text-decoration: none;
     font-weight: 1000;

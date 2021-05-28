@@ -1,8 +1,9 @@
 body{
-    padding-top: 180px;
+    margin-top: 100px;
     text-align: center;
     color:rgb(212, 204, 204) ;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(tesla.jpg.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(tesla.jpg.jpg) ;
+    background-size: cover;
 }
 body input[type="password"],body input[type="text"]{
    border : none;
@@ -18,9 +19,9 @@ body button{
     height: 50px;
     background-color:rgb(212, 204, 204) ;
 }
-.grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.flex{
+    display: flex;
+    justify-content: center;
 }
 .signinform h1{
  text-align: left;   
@@ -28,20 +29,6 @@ body button{
 }
 .inputform{
     border-right: solid 1px black;
-    margin-left: 700px;
 }
-
-
-@media(max-width:1200px){
-    #grid{
-        display: block;   
-    }
-    .inputform{
-        margin-left: 0px;
-    }
-    .signinform{
-        margin-left: 0px;
-    }
-
-}      
+   
 

@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signinstyle.css">
     <title>Signin</title>
-    <script src="./mysign.js"></script>
+
 </head>
 <body>
-    <form action="" method="POST" onsubmit="return submit()">
-        <div class = "grid" >
+    <form action="" method="" onsubmit="return submithandle()">
+        <div class = "flex" >
             <div class = "inputform">
                 <p><h3>ID</h3></p>
-                <p><input type="text" placeholder="ID"></p>
-                <input type="submit" value="ID 중복 확인" onclick="idcheck2(document.getElementById('ID').value)">
+                <p><input type="text" required placeholder="ID" id="ID"></p>
+                <input type="button" value="ID 중복 확인" onclick="">
                 <p><h3>비밀번호</h3></p>
-                <p><input type="password" placeholder="비밀번호" id="pw"></p>
-                <p>8자이상 입력해주세요</p>
+                <p><input type="password" placeholder="비밀번호" required id="pw"></p>
+                <p>6자이상 16자 이하로 입력해주세요</p>
                 <p><h3>비밀번호 확인</h3></p>
-                <p><input type="password" placeholder="비밀번호 확인" id="pwi"></p>
+                <p><input type="password" placeholder="비밀번호 확인" required id="pwi"></p>
                 <p><h3>별명</h3></p>
-                <p><input type="text" placeholder="별명" id="nickname"></p>
+                <p><input type="text" placeholder="별명" required id="nickname"></p>
                 <p><h3>전화번호</h3></p>
-                <p><input type="text" placeholder="전화번호" id = "phonenomber"></p>
+                <p><input type="number" placeholder="전화번호" required id = "phonenomber"></p>
                 <p> -를 포함하여 입력해주세요</p>
             </div>
             <div class = "signinform">
@@ -34,8 +34,7 @@
         <button type="submit">회원가입 완료</button>
     </form>
 
-
     
-
+<script src="./mysign.js"></script>
 </body>
 </html>
