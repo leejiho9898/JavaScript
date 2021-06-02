@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>출퇴근 관리</title>
     <link rel="stylesheet" href="./onoff.css">
 </head>
 <body>
-    <main>
-        
-        <div id = "buttons">
-            <input type="button" value="출근">
-            <input type="button" value="퇴근">
+    <div id = "now">
+        <h4><span id="nowday"></span></h4>
+    </div>
+    <div id="onoff-box"><!--여기에 이미지 삽입-->
+        <div id="onoff-img">
+            <ul>
+                <span id="check-time">체크시간 : </span>
+                <li id="isonoff"></li>
+            </ul>
         </div>
-        <div id = "now">
-            <h4> 현재 시간 : <span id="now"></span></h4>
-        </div>
-    </main>
-
+    </div>
+    <div id = "buttons">
+        <button id="on" onclick="changeOn()">출근하기</button>
+        <button id="off"onclick="changeOff()">퇴근하기</button>
+    </div>
 <script src="./onoff.js"></script>
 </body>
 </html>
